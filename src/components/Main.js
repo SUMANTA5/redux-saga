@@ -1,7 +1,5 @@
-
-import { addToCart } from "../redux/action";
+import { addToCart, emptyCart, removeFromCart } from "../redux/action";
 import { useDispatch } from "react-redux";
-
 
 function Main() {
   const dispatch = useDispatch();
@@ -13,8 +11,20 @@ function Main() {
     color: "red",
   };
   return (
-    <div className="App">
-      <button onClick={() => dispatch(addToCart(product))}>Add To Cart</button>
+    <div>
+      <div>
+        <button onClick={() => dispatch(addToCart(product))}>
+          Add To Cart
+        </button>
+      </div>
+      <div>
+        <button onClick={() => dispatch(removeFromCart(product.itemName))}>
+          Remove from Cart
+        </button>
+      </div>
+      <div>
+        <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>
+      </div>
     </div>
   );
 }
