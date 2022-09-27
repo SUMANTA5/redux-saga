@@ -1,6 +1,6 @@
-import { PRODUCT_LIST} from "./constant";
+import { PRODUCT_LIST } from "./constant";
 export const productList = () => {
-    let data ="hello"
+  let data = "hello";
   console.log("action call", data);
 
   return {

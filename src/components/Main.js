@@ -1,14 +1,14 @@
 import { addToCart, emptyCart, removeFromCart } from "../redux/action";
 import { useDispatch } from "react-redux";
 import { productList } from "../redux/productAction";
-import {useSelector} from "react-redux"
+import { useSelector } from "react-redux";
 
 function Main() {
   const dispatch = useDispatch();
 
-  const data = useSelector((state)=>state.productData)
+  const data = useSelector((state) => state.productData);
 
-  console.log("data in main comp", data)
+  console.log("data in main comp", data);
 
   const product = {
     itemName: "i phone",
@@ -32,7 +32,9 @@ function Main() {
         <button onClick={() => dispatch(emptyCart())}>Empty Cart</button>
       </div>
       <div>
-        <button onClick={() => dispatch(productList())}>gat product List</button>
+        <button onClick={() => dispatch(productList())}>
+          gat product List
+        </button>
       </div>
     </div>
   );
