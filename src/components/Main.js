@@ -8,7 +8,7 @@ function Main() {
 
   const data = useSelector((state) => state.productData);
 
-  console.log("data in main comp", data);
+  console.log("data in main comp.....", data);
 
   const product = {
     itemName: "i phone",
