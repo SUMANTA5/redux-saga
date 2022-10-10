@@ -7,8 +7,10 @@ export const cartData = (data = [], action) => {
 
     case REMOVE_FROM_CART:
       console.log("REMOVE_FROM_CART", action);
-      data.length = data.length ? data.length - 1 : [];
-      return [...data];
+      // data.length = data.length ? data.length - 1 : [];
+      const remainingIteme = data.filter((item) => item.id !== action.data);
+      console.log("remainingIteme",remainingIteme)
+      return [...remainingIteme];
 
     case Empty_Cart:
       console.log("Empty_Cart", action);
